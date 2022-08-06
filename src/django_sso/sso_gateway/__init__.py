@@ -15,6 +15,6 @@ def set_sso_authorization_request_used(sso_token):
         })
 
         if result.status_code != 200:
-            raise Exception(f'Некорректный ответ сервера авторизации: STATUS={result.status_code}; TEXT={result.text}')
+            raise Exception(f'Incorrect response from the authorization server: STATUS={result.status_code}; TEXT={result.text}')
     except Exception as e:
         raise SSOException(e)
