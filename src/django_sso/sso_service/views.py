@@ -58,7 +58,7 @@ def for_logged_only_view(request):
 
 def authorize_from_sso_view(request: WSGIRequest):
     """
-    Авторизует пользователя, который вернулся от SSO-сервера
+    Authorizes the user who returned from the SSO server
     """
     if not request.session.session_key or not request.session.get('token', ''):
         return redirect('/')
